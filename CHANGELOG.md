@@ -4,6 +4,38 @@ All notable changes to the "vscode-java-debugger" extension will be documented i
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.58.1 - 2024-10-31
+### Added
+- The launch config `envFile` now supports an array of env files. [#1505](https://github.com/microsoft/vscode-java-debug/issues/1505). Thanks to [Ed Hillmann](https://github.com/hildo) for contribution.
+
+### Fixed
+- Fail to debug with java 23 - Unrecognized option: -Xnoagent. [java-debug#561](https://github.com/microsoft/java-debug/issues/561).
+
+## 0.58.0 - 2024-06-27
+### Fixed
+- Latest Gradle Language Support extension cause hot code replace to fail. [#1402](https://github.com/microsoft/vscode-java-debug/issues/1402).
+- Hot Code Replace returns "Cannot find any changed classes for hot replace!" message. [#1481](https://github.com/microsoft/vscode-java-debug/issues/1481).
+
+## 0.57.0 - 2024-03-26
+### Added
+- Add support for running Java 21 "Unnamed classes and Instance main method". [#1444](https://github.com/microsoft/vscode-java-debug/issues/1444).
+
+## 0.56.2 - 2024-02-28
+### Changed
+- Move 'Run/Debug Java' menus to the same group as the other Java menus within File Explorer. [#1447](https://github.com/microsoft/vscode-java-debug/pull/1447).
+
+## 0.56.1 - 2024-02-19
+### Fixed
+- Fix the java.lang.NoClassDefFoundError when triggering code completion in DEBUG CONSOLE. See [java-debug#534](https://github.com/microsoft/java-debug/issues/534).
+
+## 0.56.0 - 2024-01-31
+### Fixed
+- Breakpoint doesn't work on lambdas which returns a generic type. See [java-debug#498](https://github.com/microsoft/java-debug/issues/498), [#1413](https://github.com/microsoft/vscode-java-debug/issues/1413) and [#1414](https://github.com/microsoft/vscode-java-debug/issues/1414).
+- Breakpoint with inline lambdas work only with last one. See [#1410](https://github.com/microsoft/vscode-java-debug/issues/1410).
+- StepInto method target doesn't work if the method is part of wrapped expression. See [java-debug#519](https://github.com/microsoft/java-debug/issues/519).
+
+  Thanks to [Gayan Perera](https://github.com/gayanper) for contribution in fixing multiple bugs.
+
 ## 0.55.0 - 2023-11-01
 ### Changed
 - Don't duplicate build reference projects when building a Gradle project managed by Build Server. [java-debug#511](https://github.com/microsoft/java-debug/pull/511).
